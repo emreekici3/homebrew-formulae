@@ -1,17 +1,24 @@
 class Cranberry < Formula
   desc "BSP tiling window manager for macOS"
   homepage "https://github.com/emreekici3/cranberry"
-  url "https://github.com/emreekici3/cranberry/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "7afa841af0b99f034a7f59d74d86c7c290197ab3c3c604ef5a81264002337fa8"
+  version "0.2.1"
   license "MIT"
-  head "https://github.com/emreekici3/cranberry.git", branch: "master"
 
-  depends_on "rust" => :build
   depends_on :macos
 
+  on_arm do
+    url "https://github.com/emreekici3/cranberry/releases/download/v0.2.1/cranberry-aarch64-apple-darwin.tar.gz"
+    sha256 "77d50764016f6ee59e10798ca65cb131ecce9ea4a6bad386eb52d497ce21a14d"
+  end
+
+  on_intel do
+    url "https://github.com/emreekici3/cranberry/releases/download/v0.2.1/cranberry-x86_64-apple-darwin.tar.gz"
+    sha256 "14bcc227eb6e2fb2a4e07d1b3ea8fa550af93225c4b6d39353c9f136a56ff32e"
+  end
+
   def install
-    system "cargo", "install", *std_cargo_args
-    pkgshare.install "examples/cberryrc"
+    bin.install "cberry"
+    pkgshare.install "cberryrc"
   end
 
   def caveats
