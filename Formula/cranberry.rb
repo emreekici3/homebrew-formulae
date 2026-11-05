@@ -1,19 +1,19 @@
 class Cranberry < Formula
   desc "BSP tiling window manager for macOS"
   homepage "https://github.com/emreekici3/cranberry"
-  version "0.4.5"
+  version "0.4.6"
   license "MIT"
 
   depends_on :macos
 
   on_arm do
-    url "https://github.com/emreekici3/cranberry/releases/download/v0.4.5/cranberry-aarch64-apple-darwin.tar.gz"
-    sha256 "bf11c366422c93e2eccb29f4e4d8e4c9f7c20092e66157a53f1b7e78eea4cd52"
+    url "https://github.com/emreekici3/cranberry/releases/download/v0.4.6/cranberry-aarch64-apple-darwin.tar.gz"
+    sha256 "de3173c28f84eeaa3f552c0ee88786a45dde1f943ca305486609d3ea79a8c368"
   end
 
   on_intel do
-    url "https://github.com/emreekici3/cranberry/releases/download/v0.4.5/cranberry-x86_64-apple-darwin.tar.gz"
-    sha256 "329d1cc731981e72963443b690fc0dbc989455ea65774230f57eefb434885918"
+    url "https://github.com/emreekici3/cranberry/releases/download/v0.4.6/cranberry-x86_64-apple-darwin.tar.gz"
+    sha256 "209ffea8483e663314d8dac3383309bee25fe4d89ac86ccb55983873bfe15014"
   end
 
   def install
